@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+div > a > button {
+  margin: 2rem;
+}

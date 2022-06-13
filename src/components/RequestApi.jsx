@@ -25,7 +25,7 @@ export default function RequestApi() {
 
   return (
     <div>
-      <h2 className="text-center m-5 fs-4">
+      <h2 className="text-center m-5 fw-bold fs-4">
         Liste des utilisateurs de JSONplaceHolder/Typicode :
       </h2>
       {isError ? (
