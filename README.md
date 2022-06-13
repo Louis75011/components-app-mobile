@@ -1,3 +1,6 @@
+# Projet : Composants d'applications pour affichage mobile
+# Technologies : React, Router-Dom, Bootstrap, Prettier...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
