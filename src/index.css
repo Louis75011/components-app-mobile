@@ -15,6 +15,7 @@ code {
 .todo {
   cursor: pointer;
 }
+
 .strike {
   text-decoration: line-through;
 }

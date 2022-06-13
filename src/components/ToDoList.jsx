@@ -110,7 +110,9 @@ export default function ToDoList() {
             onChange={handleChange}
             placeholder="Ajoutez une tâche"
           />
-          <button style={{ margin: "10px" }} className="btn btn-primary m2">Envoyer</button>
+          <button style={{ margin: "10px" }} className="btn btn-primary m2">
+            Envoyer
+          </button>
         </form>
       </div>
     );
