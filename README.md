@@ -1,5 +1,5 @@
 # Projet : Composants d'applications avec affichage mobile
-# Technologies : React, Router-Dom, Bootstrap, Prettier...
+# Technologies : React, Router-Dom, Components, Bootstrap, Prettier...
 
 
 # Getting Started with Create React App

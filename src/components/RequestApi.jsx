@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 export default function RequestApi() {
-  const [users, setUsers] = useState([]);
+  const [dataUsers, dataSetUsers] = useState([]);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
@@ -13,7 +14,7 @@ export default function RequestApi() {
         );
         if (response.status === 200) {
           let data = await response.json();
-          setUsers(data);
+          dataSetUsers(data);
           console.log("dataUser", { data });
         }
       } catch (error) {
@@ -21,7 +22,7 @@ export default function RequestApi() {
       }
     };
     fetchData();
-  }, [setUsers]);
+  }, [dataSetUsers]);
 
   return (
     <div>
@@ -32,7 +33,7 @@ export default function RequestApi() {
         <h3> Une erreur est survenue</h3>
       ) : (
         <ul className="m-3 fst-italic">
-          {users.map((user) => (
+          {dataUsers.map((user) => (
             <li key={user.id}>
               N°ID {user.id} - {user.name}
             </li>
@@ -40,7 +41,7 @@ export default function RequestApi() {
         </ul>
       )}
       <Link className="d-flex" to={"/"}>
-        <button className="btn btn-primary m-5">Retour</button>
+        <button className="btn-primary m-5">Retour</button>
       </Link>
     </div>
   );
