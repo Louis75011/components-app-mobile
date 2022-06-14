@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import data from "../dataToDo.json";
-import "../App.css";
+import data from "../services/dataToDo.json";
+import "../style/App.css";
 
 export default function ToDoList() {
   const [toDoList, setToDoList] = useState(data);
@@ -38,7 +38,7 @@ export default function ToDoList() {
   const HeaderTitle = () => {
     return (
       <header className="text-center m-5 fw-bold">
-        <h1>To Do List</h1>
+        <h2 className="text-success">Liste des tâches à accomplir :</h2>
       </header>
     );
   };

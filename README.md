@@ -1,4 +1,4 @@
-# Projet : Composants d'applications avec affichage mobile
+# Projet : Composants d'applications avec affichage mobile/tablette
 # Technologies : React, Router-Dom, Components, Bootstrap, Prettier...
 
 

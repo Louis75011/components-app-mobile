@@ -20,7 +20,7 @@ const Stopwatch = () => {
 
   return (
     <div className="stopwatch">
-      <h2 className="text-success">Compteur de temps en or:</h2>
+      <h2 className="text-success">Compteur de temps or :</h2>
 
       <div class="circle gold">
         <div className="time">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
+import "../style/App.css";
 
 export default function RequestApi() {
   const [dataUsers, dataSetUsers] = useState([]);
@@ -26,9 +26,10 @@ export default function RequestApi() {
 
   return (
     <div>
-      <h2 className="text-center m-5 fw-bold fs-4">
-        Liste des utilisateurs de JSONplaceHolder/Typicode :
+      <h2 className="text-center text-success m-5 fw-bold fs-4">
+        Liste des utilisateurs via Typicode :
       </h2>
+
       {isError ? (
         <h3> Une erreur est survenue</h3>
       ) : (
@@ -40,6 +41,7 @@ export default function RequestApi() {
           ))}
         </ul>
       )}
+
       <Link className="d-flex" to={"/"}>
         <button className="btn-primary m-5">Retour</button>
       </Link>

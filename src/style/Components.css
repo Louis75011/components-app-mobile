@@ -34,8 +34,6 @@ h2 {
 }
 
 .time {
-  /* display: inline-block;
-    flex: 1; */
   width: 85%;
   height: 80px;
   white-space: nowrap;
@@ -53,12 +51,17 @@ h2 {
 }
 
 .controls {
-  /* display: flex;
-    justify-content: space-between; */
   display: inline-block;
   width: 1%;
   height: 100%;
-  /* background-color: red; */
+}
+
+@media screen and (max-width: 840px) {
+  .controls {
+    position: absolute;
+    top: 373px;
+    left: 106px;
+  }
 }
 
 button {
@@ -70,4 +73,95 @@ button {
   border: none;
   margin: 0;
   outline: none;
+}
+
+/* Add style for Counter Component */
+.counter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 20px;
+}
+
+.counter h1 {
+  color: rgb(16, 0, 54);
+  font-size: 40px;
+  font-family: cursive;
+}
+
+.counter__output {
+  font-size: 70px;
+  margin-top: 10rem;
+  color: rgb(116, 7, 7);
+}
+
+.btn__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .btn__container {
+    row-gap: 20px;
+    flex-direction: column;
+  }
+}
+
+.control__btn {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: rgb(16, 0, 54);
+  border: 1px solid rgb(16, 0, 54);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.control__btn:hover {
+  background-color: rgb(16, 0, 54);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(16, 0, 54);
+}
+
+.reset {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: rgb(16, 0, 54);
+  border: 1px solid rgb(16, 0, 54);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.reset:hover {
+  background-color: rgb(16, 0, 54);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(16, 0, 54);
+}
+
+/* Add style for Pomodoro Component */
+.container {
+  background-color: #1e212d;
+  color: #eabf9f;
+  height: 100vh;
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pomodoro {
+  font-size: 6rem;
+}
+
+.message {
+  font-size: 3rem;
+  min-height: 1.3em;
+  margin-bottom: 0.5em;
 }

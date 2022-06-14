@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
+import "../style/App.css";
+import "../style/Components.css";
 
 export default function Counter() {
   const [counter, setCounter] = useState(0);
@@ -21,6 +22,10 @@ export default function Counter() {
 
   return (
     <div className="counter">
+      <h2 className="text-success text-center m-5 fw-bold">
+        Liste des tâches à accomplir :
+      </h2>
+
       <span className="counter__output m-5">{counter}</span>
       <div className="btn__container">
         <button className="control__btn" onClick={increase}>
