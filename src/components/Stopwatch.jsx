@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "../style/Components.css";
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import '../style/Components.css'
 
 const Stopwatch = () => {
-  const [time, setTime] = useState(0);
-  const [running, setRunning] = useState(false);
+  const [time, setTime] = useState(0)
+  const [running, setRunning] = useState(false)
 
   useEffect(() => {
-    let interval;
+    let interval
     if (running) {
       interval = setInterval(() => {
-        setTime((prevTime) => prevTime + 10);
-      }, 10);
+        setTime((prevTime) => prevTime + 10)
+      }, 10)
     } else if (!running) {
-      clearInterval(interval);
+      clearInterval(interval)
     }
-    return () => clearInterval(interval);
-  }, [running]);
+    return () => clearInterval(interval)
+  }, [running])
 
   return (
     <div className="stopwatch">
@@ -24,9 +24,9 @@ const Stopwatch = () => {
 
       <div class="circle gold">
         <div className="time">
-          <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-          <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-          <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+          <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+          <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+          <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
         </div>
         <div className="controls">
           <button className="btn btn-primary" onClick={() => setRunning(true)}>
@@ -41,11 +41,11 @@ const Stopwatch = () => {
         </div>
       </div>
 
-      <Link className="d-flex" to={"/"}>
+      <Link className="d-flex" to={'/'}>
         <button className="btn-primary m-5">Retour</button>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default Stopwatch;
+export default Stopwatch

@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "../style/App.css";
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import '../style/App.css'
 
 export default function RequestApi() {
-  const [dataUsers, dataSetUsers] = useState([]);
-  const [isError, setIsError] = useState(false);
+  const [dataUsers, dataSetUsers] = useState([])
+  const [isError, setIsError] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-        );
+        let response = await fetch('https://jsonplaceholder.typicode.com/users')
         if (response.status === 200) {
-          let data = await response.json();
-          dataSetUsers(data);
-          console.log("dataUser", { data });
+          let data = await response.json()
+          dataSetUsers(data)
+          console.log('dataUser', { data })
         }
       } catch (error) {
-        setIsError(true);
+        setIsError(true)
       }
-    };
-    fetchData();
-  }, [dataSetUsers]);
+    }
+    fetchData()
+  }, [dataSetUsers])
 
   return (
     <div>
@@ -42,9 +40,9 @@ export default function RequestApi() {
         </ul>
       )}
 
-      <Link className="d-flex" to={"/"}>
+      <Link className="d-flex" to={'/'}>
         <button className="btn-primary m-5">Retour</button>
       </Link>
     </div>
-  );
+  )
 }

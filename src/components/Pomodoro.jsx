@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Pomodoro() {
-  const [secondsLeft, setSecondsLeft] = useState(25 * 60);
-  const [timer, setTimer] = useState();
+  const [secondsLeft, setSecondsLeft] = useState(25 * 60)
+  const [timer, setTimer] = useState()
 
   const start = () => {
     const timer = setInterval(() => {
-      setSecondsLeft((secondsLeft) => secondsLeft - 1);
+      setSecondsLeft((secondsLeft) => secondsLeft - 1)
       if (secondsLeft === 0) {
-        clearInterval(timer);
+        clearInterval(timer)
       }
-    }, 1000);
-    setTimer(timer);
-  };
+    }, 1000)
+    setTimer(timer)
+  }
 
   useEffect(() => {
     if (secondsLeft === 0) {
-      clearInterval(timer);
+      clearInterval(timer)
     }
-  }, [secondsLeft, timer]);
+  }, [secondsLeft, timer])
 
   useEffect(() => {
-    return () => clearInterval(timer);
-  }, [timer]);
+    return () => clearInterval(timer)
+  }, [timer])
 
   return (
     <div className="container">
@@ -33,9 +33,9 @@ export default function Pomodoro() {
       </button>
       <div className=" message pomodoro">{secondsLeft} Secondes restantes</div>
 
-      <Link className="d-flex" to={"/"}>
+      <Link className="d-flex" to={'/'}>
         <button className="btn-primary m-5">Retour</button>
       </Link>
     </div>
-  );
+  )
 }

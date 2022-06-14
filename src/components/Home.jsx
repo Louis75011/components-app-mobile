@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../style/App.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import '../style/App.css'
 
 export default function Home() {
   return (
@@ -9,35 +9,35 @@ export default function Home() {
         Liste de modules et applications !
       </h1>
 
-      <div classeName="m-4">
+      <div className="m-4">
         <h2 className="m-2 fst-italic">- Liste de tâches à faire:</h2>
         <Link className="m-2 fw-bolder fs-4" to={`/todolist`}>
           To-Do List
         </Link>
       </div>
 
-      <div classeName="m-4">
+      <div className="m-4">
         <h2 className="m-2 fst-italic">- Pomodoro application:</h2>
         <Link className="m-2 fw-bolder fs-4" to={`/pomodoro`}>
           Pomodoro chronomètre
         </Link>
       </div>
 
-      <div classeName="m-4">
+      <div className="m-4">
         <h2 className="m-2 fst-italic">- Chronomètre:</h2>
         <Link className="m-2 fw-bolder fs-4" to={`/stopwatch`}>
           Stopwatch
         </Link>
       </div>
 
-      <div classeName="m-4">
+      <div className="m-4">
         <h2 className="m-2 fst-italic">- Compteur de cliques/actions:</h2>
         <Link className="m-2 fw-bolder fs-4" to={`/counter`}>
           Counter
         </Link>
       </div>
 
-      <div classeName="m-4">
+      <div className="m-4">
         <h2 className="m-2 fst-italic">- Requête API complète:</h2>
         <Link className="m-2 fw-bolder fs-4" to={`/requestapi`}>
           Request Api
@@ -47,5 +47,5 @@ export default function Home() {
         En vous souhaitant bonne découverte !
       </h4>
     </div>
-  );
+  )
 }

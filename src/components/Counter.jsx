@@ -1,24 +1,24 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../style/App.css";
-import "../style/Components.css";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import '../style/App.css'
+import '../style/Components.css'
 
 export default function Counter() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0)
 
   const increase = () => {
-    setCounter((count) => count + 1);
-  };
+    setCounter((count) => count + 1)
+  }
 
   const decrease = () => {
     if (counter > 0) {
-      setCounter((count) => count - 1);
+      setCounter((count) => count - 1)
     }
-  };
+  }
 
   const reset = () => {
-    setCounter(0);
-  };
+    setCounter(0)
+  }
 
   return (
     <div className="counter">
@@ -39,9 +39,9 @@ export default function Counter() {
         </button>
       </div>
 
-      <Link className="d-flex" to={"/"}>
+      <Link className="d-flex" to={'/'}>
         <button className="btn-primary m-5">Retour</button>
       </Link>
     </div>
-  );
+  )
 }
