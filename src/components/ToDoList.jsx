@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import data from "../data.json";
+import data from "../dataToDo.json";
 import "../App.css";
 
 export default function ToDoList() {
