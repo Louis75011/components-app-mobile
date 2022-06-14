@@ -22,7 +22,7 @@ const Stopwatch = () => {
     <div className="stopwatch">
       <h2 className="text-success">Compteur de temps or :</h2>
 
-      <div class="circle gold">
+      <div className="circle gold">
         <div className="time">
           <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
           <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
