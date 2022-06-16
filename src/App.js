@@ -5,6 +5,7 @@ import Pomodoro from './components/Pomodoro.jsx'
 import Stopwatch from './components/Stopwatch'
 import Counter from './components/Counter'
 import RequestApi from './components/RequestApi.jsx'
+import ClassName from './components/ClassName.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 import './style/App.css'
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/stopwatch" element={<Stopwatch />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/requestapi" element={<RequestApi />}></Route>
+        <Route path="/classname" element={<ClassName />}></Route>
       </Routes>
     </>
   )

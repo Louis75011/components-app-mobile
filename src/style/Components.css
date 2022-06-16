@@ -165,3 +165,21 @@ button {
   min-height: 1.3em;
   margin-bottom: 0.5em;
 }
+
+.cn-lead {
+  font-size: 40px;
+}
+.cn-bold {
+  font-weight: bold;
+}
+.cn-primary {
+  color: cyan;
+}
+
+.cn-background {
+  background-color: darkred;
+}
+
+.cn-enabled {
+  color: darkblue;
+}
