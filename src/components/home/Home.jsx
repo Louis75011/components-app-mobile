@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../style/App.css'
+import '../../style/App.css'
 
 export default function Home() {
   return (
@@ -35,6 +35,13 @@ export default function Home() {
           <h2 className="m-2 fst-italic">- Compteur de cliques/actions:</h2>
           <Link className="m-2 fw-bolder fs-4" to={`/counter`}>
             Counter
+          </Link>
+        </div>
+
+        <div className="m-4">
+          <h2 className="m-2 fst-italic">- Système d'onglets:</h2>
+          <Link className="m-2 fw-bolder fs-4" to={`/tabssystem`}>
+            Gestion des onglets
           </Link>
         </div>
 

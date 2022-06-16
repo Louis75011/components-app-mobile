@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import BackButton from './utils/BackButton'
 import '../style/App.css'
 
 export default function RequestApi() {
@@ -40,9 +40,7 @@ export default function RequestApi() {
         </ul>
       )}
 
-      <Link className="d-flex" to={'/'}>
-        <button className="btn-primary m-5">Retour</button>
-      </Link>
+      <BackButton />
     </div>
   )
 }

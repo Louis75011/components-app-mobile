@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import BackButton from './utils/BackButton'
+
 
 export default function Pomodoro() {
   const [secondsLeft, setSecondsLeft] = useState(25 * 60)
@@ -33,9 +34,7 @@ export default function Pomodoro() {
       </button>
       <div className=" message pomodoro">{secondsLeft} Secondes restantes</div>
 
-      <Link className="d-flex" to={'/'}>
-        <button className="btn-primary m-5">Retour</button>
-      </Link>
+      <BackButton />
     </div>
   )
 }

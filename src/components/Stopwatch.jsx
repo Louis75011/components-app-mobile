@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import BackButton from './utils/BackButton'
 import '../style/Components.css'
 
 const Stopwatch = () => {
@@ -41,9 +41,7 @@ const Stopwatch = () => {
         </div>
       </div>
 
-      <Link className="d-flex" to={'/'}>
-        <button className="btn-primary m-5">Retour</button>
-      </Link>
+      <BackButton />
     </div>
   )
 }

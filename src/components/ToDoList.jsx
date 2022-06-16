@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import BackButton from './utils/BackButton'
 import data from '../services/dataToDo.json'
 import '../style/App.css'
 
@@ -128,9 +128,7 @@ export default function ToDoList() {
       />
       <ToDoForm addTask={addTask} />
 
-      <Link className="d-flex" to={'/'}>
-        <button className="btn-primary m-5">Retour</button>
-      </Link>
+      <BackButton />
     </div>
   )
 }

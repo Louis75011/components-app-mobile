@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import BackButton from './utils/BackButton'
 import '../style/App.css'
 import '../style/Components.css'
 
@@ -39,9 +39,7 @@ export default function Counter() {
         </button>
       </div>
 
-      <Link className="d-flex" to={'/'}>
-        <button className="btn-primary m-5">Retour</button>
-      </Link>
+      <BackButton />
     </div>
   )
 }

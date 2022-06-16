@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import BackButton from './utils/BackButton'
 import '../style/Components.css'
 
 export default function ClassName() {
@@ -43,9 +43,7 @@ export default function ClassName() {
           <RenderClass enabled={true} />
         </div>
 
-        <Link className="d-flex" to={'/'}>
-          <button className="btn-primary m-5">Retour</button>
-        </Link>
+        <BackButton />
       </div>
     </>
   )
