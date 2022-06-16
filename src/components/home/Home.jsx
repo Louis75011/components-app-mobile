@@ -5,7 +5,7 @@ import '../../style/App.css'
 export default function Home() {
   return (
     <div className="container">
-      <div className="bg-dark text-white p-3 m-1">
+      <div className="bg-dark text-white m-1">
         <h1 className="text-center m-5 fw-bold bg-info">
           Liste de modules et applications !
         </h1>
@@ -32,9 +32,9 @@ export default function Home() {
         </div>
 
         <div className="m-4">
-          <h2 className="m-2 fst-italic">- Compteur de cliques/actions:</h2>
+          <h2 className="m-2 fst-italic">- Compteur d'actions:</h2>
           <Link className="m-2 fw-bolder fs-4" to={`/counter`}>
-            Counter
+            Counter classical
           </Link>
         </div>
 

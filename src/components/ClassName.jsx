@@ -9,7 +9,9 @@ export default function ClassName() {
   const RenderClass = ({ enabled }) => {
     return (
       <div>
-        <div className={enabled ? 'cn-enabled' : ''}>Conditionnal Class Active</div>
+        <div className={enabled ? 'cn-enabled' : ''}>
+          Conditionnal Class Active
+        </div>
         <div className={enabled ? '' : 'cn-enabled'}>
           Conditionnal Class Inactive
         </div>

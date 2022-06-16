@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BackButton from './utils/BackButton'
 
-
 export default function Pomodoro() {
   const [secondsLeft, setSecondsLeft] = useState(25 * 60)
   const [timer, setTimer] = useState()
