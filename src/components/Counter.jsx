@@ -22,9 +22,7 @@ export default function Counter() {
 
   return (
     <div className="counter">
-      <h2 className="text-success text-center m-5 fw-bold">
-        Compteur de cliques :
-      </h2>
+      <h2 className="text-success text-center m-5 fw-bold">Compteur de cliques :</h2>
 
       <span className="counter__output m-5">{counter}</span>
       <div className="btn__container">

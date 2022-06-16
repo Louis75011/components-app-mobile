@@ -37,23 +37,15 @@ const TabsSystem = () => {
 
       <div className="Tabs">
         <ul className="nav">
-          <li
-            className={activeTab === 'tab1' ? 'active' : ''}
-            onClick={handleFirstTab}
-          >
+          <li className={activeTab === 'tab1' ? 'active' : ''} onClick={handleFirstTab}>
             1
           </li>
-          <li
-            className={activeTab === 'tab2' ? 'active' : ''}
-            onClick={handleSecondTab}
-          >
+          <li className={activeTab === 'tab2' ? 'active' : ''} onClick={handleSecondTab}>
             2
           </li>
         </ul>
 
-        <div className="outlet">
-          {activeTab === 'tab1' ? <FirstTab /> : <SecondTab />}
-        </div>
+        <div className="outlet">{activeTab === 'tab1' ? <FirstTab /> : <SecondTab />}</div>
 
         <BackButton />
       </div>

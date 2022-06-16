@@ -9,9 +9,7 @@ export default function ToDoList() {
   // Boucle sur les données de tâches
   const handleToggle = (id) => {
     let mapped = toDoList.map((task) => {
-      return task.id === Number(id)
-        ? { ...task, complete: !task.complete }
-        : { ...task }
+      return task.id === Number(id) ? { ...task, complete: !task.complete } : { ...task }
     })
     setToDoList(mapped)
   }
@@ -27,10 +25,7 @@ export default function ToDoList() {
   // Possibilité d'ajout des tâches
   const addTask = (userInput) => {
     let copy = [...toDoList]
-    copy = [
-      ...copy,
-      { id: toDoList.length + 1, task: userInput, complete: false },
-    ]
+    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }]
     setToDoList(copy)
   }
 
@@ -69,19 +64,10 @@ export default function ToDoList() {
       <div className="text-center">
         {toDoList.map((todo, index) => {
           return (
-            <ToDo
-              key={index}
-              todo={todo}
-              handleToggle={handleToggle}
-              handleFilter={handleFilter}
-            />
+            <ToDo key={index} todo={todo} handleToggle={handleToggle} handleFilter={handleFilter} />
           )
         })}
-        <button
-          style={{ margin: '20px' }}
-          className="btn btn-danger"
-          onClick={handleFilter}
-        >
+        <button style={{ margin: '20px' }} className="btn btn-danger" onClick={handleFilter}>
           Effacer les tâches accomplies
         </button>
       </div>
@@ -121,11 +107,7 @@ export default function ToDoList() {
   return (
     <div>
       <HeaderTitle />
-      <ToDoList
-        toDoList={toDoList}
-        handleToggle={handleToggle}
-        handleFilter={handleFilter}
-      />
+      <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter} />
       <ToDoForm addTask={addTask} />
 
       <BackButton />

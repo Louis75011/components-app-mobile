@@ -9,5 +9,6 @@ div > a > button {
 }
 
 .container {
+  height: 100%;
   text-align: center;
 }

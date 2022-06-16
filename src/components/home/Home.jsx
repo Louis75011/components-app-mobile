@@ -1,67 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import HomeItem from './HomeItem'
 import '../../style/App.css'
 
 export default function Home() {
   return (
     <div className="container">
       <div className="bg-dark text-white m-1">
-        <h1 className="text-center m-5 fw-bold bg-info">
-          Liste de modules et applications !
-        </h1>
+        <h1 className="text-center m-5 fw-bold bg-info">Liste de modules et applications !</h1>
 
-        <div className="m-4">
-          <h2 className="m-2 fst-italic">- Liste de tâches à faire:</h2>
-          <Link className="m-2 fw-bolder fs-4" to={`/todolist`}>
-            To-Do List
-          </Link>
-        </div>
+        <HomeItem title="Liste de tâches à faire" link="todolist" text="ToDoList" />
+        <HomeItem title="Pomodoro application" link="pomodoro" text="Chronomètre de travail" />
+        <HomeItem title="Chronomètre" link="stopwatch" text="Stopwatch" />
+        <HomeItem title="Compteur d'actions" link="counter" text="Counter of clicks" />
+        <HomeItem title="Système d'onglets" link="tabssystem" text="Gestion des onglets" />
+        <HomeItem title="Requête API complète" link="requestapi" text="Request API" />
+        <HomeItem title="Gestion de classes" link="classname" text="Gestions de ClassName" />
 
-        <div className="m-4">
-          <h2 className="m-2 fst-italic">- Pomodoro application:</h2>
-          <Link className="m-2 fw-bolder fs-4" to={`/pomodoro`}>
-            Pomodoro chronomètre
-          </Link>
-        </div>
-
-        <div className="m-4">
-          <h2 className="m-2 fst-italic">- Chronomètre:</h2>
-          <Link className="m-2 fw-bolder fs-4" to={`/stopwatch`}>
-            Stopwatch
-          </Link>
-        </div>
-
-        <div className="m-4">
-          <h2 className="m-2 fst-italic">- Compteur d'actions:</h2>
-          <Link className="m-2 fw-bolder fs-4" to={`/counter`}>
-            Counter classical
-          </Link>
-        </div>
-
-        <div className="m-4">
-          <h2 className="m-2 fst-italic">- Système d'onglets:</h2>
-          <Link className="m-2 fw-bolder fs-4" to={`/tabssystem`}>
-            Gestion des onglets
-          </Link>
-        </div>
-
-        <div className="m-4">
-          <h2 className="m-2 fst-italic">- Requête API complète:</h2>
-          <Link className="m-2 fw-bolder fs-4" to={`/requestapi`}>
-            Request Api
-          </Link>
-        </div>
-
-        <div className="m-4">
-          <h2 className="m-2 fst-italic">- Gestion de classes:</h2>
-          <Link className="m-2 fw-bolder fs-4" to={`/classname`}>
-            Gestion de ClassName
-          </Link>
-        </div>
-
-        <h4 className="text-center m-5 fw-bold bg-info">
-          En vous souhaitant bonne découverte !
-        </h4>
+        <h4 className="text-center m-5 fw-bold bg-info">En vous souhaitant bonne découverte !</h4>
       </div>
     </div>
   )
